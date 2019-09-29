@@ -5,14 +5,15 @@
 using namespace std;
 
 //globals
-int random1; 
+int random1;
+int cont[ARR_SIZE]; 
 
 //prototypes
 void stdlibRandom();
 void algorithmRandom();
 
 int main(){
-
+	stdlibRandom();
 	cin.get();
 
 	return 0;
@@ -20,14 +21,10 @@ int main(){
 
 void stdlibRandom(){
 	
-	for (int i = 0; i < 10; i++){
+	for (int i = 0; i < ARR_SIZE; i++){
 
 		random1 = rand() % 10 + 0;
-
-		printf("%d\n",random1);
+		cont[i]=random1;
+		printf("%d\n",cont[i]);
 	}
-}
-
-void algorithmRandom(){
-
 }

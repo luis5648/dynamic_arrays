@@ -1,30 +1,37 @@
 #include <iostream>
 #include <cstdlib>
 #include <cstdio>
-#define ARR_SIZE 10
+#define ARR_SIZE 11
+#define RUNS 1000
+
 using namespace std;
 
 //globals
 int random1;
-int cont[ARR_SIZE]; 
+int cont[ARR_SIZE][RUNS];
 
 //prototypes
 void stdlibRandom();
 void algorithmRandom();
 
-int main(){
+int main()
+{
 	stdlibRandom();
-	cin.get();
 
 	return 0;
 }
 
-void stdlibRandom(){
-	
-	for (int i = 0; i < ARR_SIZE; i++){
+void stdlibRandom()
+{
 
+	for (int i = 0; i < RUNS; i++){
+		
 		random1 = rand() % 10 + 0;
-		cont[i]=random1;
-		printf("%d\n",cont[i]);
+		for (int j = 0; j < ARR_SIZE; j++){
+
+
+			cont[i][j]= random1;
+			printf("%d\n", cont[i][j]);
+		}
 	}
 }
